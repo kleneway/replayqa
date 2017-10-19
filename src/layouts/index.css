@@ -220,7 +220,6 @@ p.paragraph {
   padding: 0 15px;
   width: 260px;
   display: inline-block;
-  cursor: pointer;
 }
 .ctas-button {
   display: inline-block;
@@ -236,6 +235,7 @@ p.paragraph {
   letter-spacing: 0.3px;
   border: 1px solid white;
   text-decoration: none;
+  cursor: pointer;
 }
 @media (max-width: 440px) {
   .ctas-input,
