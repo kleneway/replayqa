@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../img/webapp.png';
 import * as firebase from 'firebase';
+import reactGA from 'react-ga';
 
 var config = {
   apiKey: 'AIzaSyCYmjmHnpdUXaocVbRTDjID1SIEhn3G-aw',
@@ -11,6 +12,7 @@ var config = {
   messagingSenderId: '806166173936'
 };
 firebase.initializeApp(config);
+reactGA.initialize('UA-108370636-1');
 
 export default class IndexPage extends React.Component {
   constructor(props) {
@@ -41,6 +43,13 @@ export default class IndexPage extends React.Component {
     this.setState({
       submitted: true
     });
+    reactGA.event({
+      category: 'Sign Up',
+      action: 'entered email'
+    });
+    if (process.env.NODE_ENV === 'production' && typeof fbq === 'function') {
+      fbq('track', 'CompleteRegistration');
+    }
   }
 
   render() {
@@ -93,8 +102,9 @@ export default class IndexPage extends React.Component {
               <b className="emoji">🏝</b>
               <h3 className="subheading">Setup is a breeze</h3>
               <p className="paragraph">
-                Just drop our two lines of javascript into your site and you
-                will start recording users sessions instantly.
+                Forget complicated Selenium scripts. Just drop our two lines of
+                javascript into your site and you will start recording users
+                sessions instantly.
               </p>
             </div>
             <div className="col-4">
@@ -122,9 +132,9 @@ export default class IndexPage extends React.Component {
             <div className="flex text-center">
               <div className="col-12">
                 <h4 className="subheading">
-                  "Releasing new code to production used to be the most
-                  stressful part of my job. Now we are able to spend more time
-                  building new features and less time doing manual testing."
+                  "We used to spend hours creating complex and fragile scripts
+                  in Selenium. Now we are able to spend more time building new
+                  features and less time doing manual testing."
                 </h4>
                 <p className="paragraph">Kevin Baker - CTO @ Rustic Labs</p>
               </div>

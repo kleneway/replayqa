@@ -8,13 +8,24 @@ import './index.css';
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Replay QA - test with real user sessions"
+      title="Replay QA - software testing with real user sessions"
       meta={[
         {
           name: 'description',
           content: 'Test your site with recorded user sessions'
         },
-        { name: 'keywords', content: 'testing, qa, test' }
+        {
+          name: 'keywords',
+          content:
+            'software testing, selenium, qa, user testing, automated testing'
+        }
+      ]}
+      link={[
+        {
+          rel: 'icon',
+          sizes: '16x16',
+          href: require('./favicon.png')
+        }
       ]}
     />
     {children()}

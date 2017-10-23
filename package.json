@@ -7,7 +7,9 @@
     "firebase": "^4.6.0",
     "gatsby": "^1.9.73",
     "gatsby-link": "^1.6.22",
-    "gatsby-plugin-react-helmet": "^1.0.8"
+    "gatsby-plugin-facebook-pixel": "^1.0.3",
+    "gatsby-plugin-react-helmet": "^1.0.8",
+    "react-ga": "^2.3.5"
   },
   "keywords": ["gatsby"],
   "license": "MIT",
@@ -18,7 +20,8 @@
     "format":
       "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "deploy":
+      "gatsby build --prefix-paths && echo 'www.replayqa.com' > ./public/CNAME && gh-pages -d public"
   },
   "devDependencies": {
     "gh-pages": "^1.0.0",

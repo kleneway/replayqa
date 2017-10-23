@@ -2,6 +2,14 @@ module.exports = {
   siteMetadata: {
     title: `Replay QA`
   },
-  plugins: [`gatsby-plugin-react-helmet`],
-  pathPrefix: '/replayqa'
+  plugins: [
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: '1165804453454570'
+      }
+    },
+    `gatsby-plugin-react-helmet`
+  ],
+  pathPrefix: '/'
 };
