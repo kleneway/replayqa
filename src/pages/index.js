@@ -65,13 +65,11 @@ export default class IndexPage extends React.Component {
           </div>
           <div className="container-lrg flex">
             <div className="col-6 centervertical">
-              <h1 className="heading">
-                Test your app with real user sessions.
-              </h1>
+              <h1 className="heading">AI Powered Test Automation</h1>
               <h2 className="paragraph ">
-                Record user flows and test your site with replays of real user
-                actions. Uncover bugs or regressions with simulated users, not
-                real ones.&nbsp;
+                Train our AI with replays of your users. Simply record a few
+                user sessions and then let our AI continuously test your app
+                with real data. Sign up now for free!
               </h2>
               <div className="ctas">
                 <input
@@ -145,7 +143,7 @@ export default class IndexPage extends React.Component {
           <div className="container-sml text-center">
             <div className="col-12">
               <h5 className="heading">
-                Catch bugs with fake users, not real ones. Start today.
+                Automate your tests with AI. Sign up today for free.
               </h5>
               <div className="ctas">
                 <input
