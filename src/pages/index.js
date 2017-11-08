@@ -67,9 +67,9 @@ export default class IndexPage extends React.Component {
             <div className="col-6 centervertical">
               <h1 className="heading">AI Powered Test Automation</h1>
               <h2 className="paragraph ">
-                Train our AI with replays of your users. Simply record a few
-                user sessions and then let our AI continuously test your app
-                with real data. Sign up now for free!
+                Train our AI with your user data. Simply record a few user
+                sessions and then let our AI continuously test your app with
+                real data. Enter your email below to get started for free!
               </h2>
               <div className="ctas">
                 <input
@@ -79,7 +79,7 @@ export default class IndexPage extends React.Component {
                   placeholder="Your Email Address"
                 />
                 <button className="ctas-button" onClick={this.saveEmail}>
-                  Sign Up
+                  Get Started
                 </button>
               </div>
             </div>
